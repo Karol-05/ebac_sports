@@ -21,18 +21,11 @@ const Produto = ({
     <div>
       <h3>{produto.nome}</h3>
 
-      <button onClick={() => favoritar(produto)}>
-        Favoritar
-      </button>
+      <button onClick={() => favoritar(produto)}>Favoritar</button>
 
       <button
         onClick={() => {
-          dispatch(
-            adicionar({
-              id: produto.id,
-              nome: produto.nome
-            })
-          )
+          dispatch(adicionar(produto))
 
           aoComprar(produto)
         }}
